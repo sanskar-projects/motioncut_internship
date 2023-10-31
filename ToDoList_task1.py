@@ -3,7 +3,6 @@ import tkinter
 import sys
 all_tasks=[]
 completed_tasks=[]
-
 def add():
     header("CREATE TASK")
     global all_tasks
@@ -18,7 +17,6 @@ def add():
     list.append(priority)
     all_tasks.append(list)
     footer("TASK CREATED")
-
 def display():
     header("PENDING TASKS")
     sort()
@@ -61,7 +59,6 @@ def display():
     d["priority"]=list
     print(DataFrame(d).rename_axis("task id"))
     footer("")
-
 def tick():
     header("MARK TASK AS COMPLETED")
     global all_tasks,completed_tasks
@@ -69,7 +66,6 @@ def tick():
     completed_tasks.append(all_tasks[n])
     all_tasks.pop(n)
     footer("TASK MARKED AS COMPLETED")
-
 def update():
     header("UPDATE TASK")
     global all_tasks
@@ -85,35 +81,30 @@ def update():
     list.append(priority)
     all_tasks[n]=list
     footer("TASK UPDATED")
-
 def pop_all():
     header("DELETE PENDING TASK")
     global all_tasks
     n=int(input("enter task id: "))
     all_tasks.pop(n)
     footer("TASK DELETED")
-
 def pop_completed():
     header("DELETE COMPLETED TASK")
     global completed_tasks
     n=int(input("enter task id: "))
     completed_tasks.pop(n)
     footer("TASK DELETED")
-
 def clear_all():
     header("")
     global all_tasks
     all_tasks.clear()
     print("PENDING TASKS CLEARED")
     footer("")
-
 def clear_completed():
     header("")
     global completed_tasks
     completed_tasks.clear()
     print("COMPLETED TASKS CLEARED")
     footer("")
-
 def load():
     header("")
     global all_tasks,completed_tasks
@@ -152,8 +143,6 @@ def load():
         completed_tasks=[]
         print("DATA NOT FOUND")
     footer("")
-        
-
 def store():
     header("")
     sort()
@@ -185,25 +174,20 @@ def store():
     f.close()
     print("DATA HAS BEEN STORED")
     footer("")
-
 def sort():
     global all_tasks,completed_tasks
     all_tasks.sort(key=lambda x:x[3])
     completed_tasks.sort(key=lambda x:x[3])
-
 def exit():
     header("EXIT")
     print("THANK YOU")
     sys.exit()
-
 def header(s):
     x="-"*50
     print(x+"\n"+s+"\n\n\n\n\n")
-
 def footer(s):
     x="-"*50
     print("\n\n\n\n\n"+s+"\n"+x)
-
 def main():
     header("TO DO LIST")
     r=tkinter.Tk()
@@ -254,5 +238,4 @@ def main():
     b11=tkinter.Button(f1,text='EXIT',width=100,height=1,command=exit,bg='black',fg='white')
     b11.pack()
     r.mainloop()
-
 main()
