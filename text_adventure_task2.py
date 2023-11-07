@@ -53,7 +53,7 @@ def main():
         print("\tTHE KIDNAPPING(A TEXT ADVENTURE)\n")
         global s,S,bit
         s=input("what is the victim's name?: ")
-        S=input("what is the kidnapper's name: ")
+        S=input("what is the kidnapper's name?: ")
         x=""
         while(x!="victim" and x!="kidnapper"):
                 x=input("do you want to help victim or kidnapper?: ")
