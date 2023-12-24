@@ -6,7 +6,7 @@
 3) Password Generator: Generates random passwords for the user. The user can specify the number of passwords and the length of passwords to generate. Due to the implementation of file handling user has the ability to view or clear the password history as well. It ensured that if length is greater than four then the passwords contain at least one; lowercase letter, uppercase letter, digit and special character.
 <img src="output/PasswordGenerator.png">
 4.a) Currency Converter: Allows user to convert a specific amount from one currency to another. 32 currencies are supported and their exchange rates are obtained from European Central Bank via forex-python API in real time.
-<img src="output/CurrencyConvertor1.png">
-<img src="output/CurrencyConvertor2.png">
+<img src="output/CurrencyConverter1.png">
+<img src="output/CurrencyConverter2.png">
 4.b) Unit Converter: Allows interconversion of the following physical quantitites: temperature(celsius<>fahrenheit), length(metres<>feet), weight(kilograms<>pounds)
-<img src="output/UnitConvertor.png">
+<img src="output/UnitConverter.png">
